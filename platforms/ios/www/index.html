@@ -1,0 +1,140 @@
+<!doctype html>
+<html class="no-js" lang="en" manifest="manifest.appcache">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deluxe Distribution</title>
+    <link rel="stylesheet" href="css/app.css" />
+    <script src="js/modernizr.js"></script>
+  </head>
+  <body>
+ <div class="home"> 
+ <!-- HEADER --> 
+  <header class="fixed">
+  <nav class="tab-bar">
+  <section class="middle tab-bar-section">
+        <h1 class="title">
+       Deluxe Distribution
+        </h1>
+      </section>
+ </nav>
+</header>
+  
+<!-- CATALOG -->
+    <div class="top"></div>
+    <main> 
+<!-- CATALOG -->
+ 
+    <section class="featured">
+     <article class="homescreen small-4 small-offset-4 columns text-center">
+        <img src="img/dlx/hp-dlxsf.png" />
+      </article>
+       <article class="homescreen small-12 columns text-center">
+        <h2>Spring '15 Drop 1</h2>
+        <h3>Brand New Internet Technology</h3>
+      </article>
+    </section>
+  
+    <section class="cat-nav" >
+      <article class="main-menu">
+        <a href="rs.html"><img src="img/dlx/hp-real.jpg" /></a>
+      </article>
+      <article class="main-menu">
+       <a href="th.html"><img src="img/dlx/hp-thunder.jpg" /></a>
+      </article>
+      <article class="main-menu">
+        <a href="sf.html"><img src="img/dlx/hp-spitfire.jpg" /></a>
+      </article>
+      <article class="main-menu">
+        <a href="ah.html"><img src="img/dlx/hp-antihero.jpg" /></a>
+      </article>
+      <article class="main-menu">
+        <a href="krkd.html"><img src="img/dlx/hp-krkd.jpg" /></a>
+      </article>
+      <article class="main-menu">
+       <a href="ve.html"><img src="img/dlx/hp-venture.jpg" /></a>
+      </article>
+    </section>
+    <section class="featured">
+     <article class="homescreen small-10 small-offset-1 columns text-center">
+        <a href="#" data-reveal-id="jimModal" class="button tiny round">Jim's Emo Words</a> 
+        <a href="#" data-reveal-id="salesModal" class="button tiny round">Sales Inquiries</a>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <section class="copyright">
+    &copy; 2015 Deluxe Distribution, All Rights reserved.
+    </section>
+  </footer>
+</div>
+
+<!-- Reveal Modals begin -->
+<div id="salesModal" class="sales reveal-modal small" data-reveal>
+  <h4>Our Sales Guys Are Standing By</h4>
+  <ul class="salesdudes">
+  <li><a href="mailto:tim@dlxsf.com"><img src="img/dlx/sm-tim.jpg" />Tim Close</a></li>
+  <li><a href="mailto:brad@dlxsf.com"><img src="img/dlx/sm-brad.jpg" />Brad Handel</a></li>
+  <li><a href="mailto:jon@dlxsf.com"><img src="img/dlx/sm-shaub.jpg" />Jon Schaub</a></li>
+  <li><a href="mailto:jeremy@dlxsf.com"><img src="img/dlx/sm-zig.jpg" />Jeremy Ziegler</a></li>
+  <li><a href="mailto:mikel@dlxsf.com"><img src="img/dlx/sm-mikel.jpg" />Mikel Garmendia</a></li>
+   <li class="text-center other"><a href="mailto:info@dlxsf.com">Questions? Suggestions?<br />Let us know!</a></li>
+  </ul>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="jimModal" class="copy reveal-modal large" data-reveal>
+<p>Thank you for checking out DLX's most recent drop... for those who have been following our catalog camp drama through the years - this season's crunch time was heavier than most.</p>
+<p>We tried to pull a lot this time. Not just new decks, wheels and trucks but new ways of thinking and doing things. It was definitely challenging but ended up really good. We're a small, close crew here. We work together, we skate together and at times we fight each other... and Mic usually wins.</p>
+<p>The work within this drop is the collective effort from a dedicated crew of people who truly give a shit about what they are doing. It's never just another drop or release to us... that would cheapen what we get to do. It's about being excited and thankful to be involved in skateboarding. It's about pushing ourselves. Working to make the very best stuff that kicks fucking ass and helps skateboarding. If we occasionally fight along the way it's only because everyone cares that fucking much. I am thankful to get to work with such a dedicated crew... even when they gang up against me... it makes stuff that much better.</p>
+<p>Maybe we make it hard on ourselves... true... but we're forever learning.</p><p>Skateboarding is like life. It's an ongoing learning journey and one that we are thankful to be a part of... and we owe it to skateboarding and skateboarders to push what we do as hard as we can... forever. </p><p>
+Thank you for letting us be apart of what we love. It is never taken for granted.
+</p>
+<p>Hopefully within this beast you'll find some things to inspire you to get out and roll, fall, get up again and roll some more.</p><p>Together we roll. United we fall.
+</p>
+<p>Thank you skateboarding,
+<br />
+<i>Jim Thiebaud</i>
+<br />
+&mdash; If you have any comments or suggestions on things we should do, make, and improve - <a href="mailto:jim43@earthlink.net">please hit me direct</a>.
+</p>
+ <a class="close-reveal-modal">&#215;</a>
+</div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/jquery.lazyload.min.js"></script>
+
+    <script>
+
+  $(document).ready( function() {
+  setTimeout("animation()",0);  
+  });
+   
+  function animation(){
+    $(".home").animate({opacity: '1'}, {queue:false, duration:800});
+    $(".catalog").animate({opacity: '1'}, {queue:false, duration:800});
+  }
+     
+  $('.catalog').imagesLoaded()
+  .always( function( instance ) {
+    console.log('all images loaded');
+  })
+  .done( function( instance ) {
+    console.log('all images successfully loaded');
+  })
+  .fail( function() {
+    console.log('all images loaded, at least one is broken');
+  })
+  .progress( function( instance, image ) {
+    var result = image.isLoaded ? 'loaded' : 'broken';
+    console.log( 'image is ' + result + ' for ' + image.img.src );
+  });
+
+    </script>
+
+  </body>
+</html>
